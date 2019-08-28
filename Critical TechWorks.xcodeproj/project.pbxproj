@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		468601762316C81000DAED22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468601752316C81000DAED22 /* AppDelegate.swift */; };
 		468601782316C81000DAED22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468601772316C81000DAED22 /* ViewController.swift */; };
-		4686017B2316C81000DAED22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468601792316C81000DAED22 /* Main.storyboard */; };
 		4686017D2316C81100DAED22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4686017C2316C81100DAED22 /* Assets.xcassets */; };
 		468601802316C81100DAED22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4686017E2316C81100DAED22 /* LaunchScreen.storyboard */; };
 		4686018B2316C81100DAED22 /* Critical_TechWorksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686018A2316C81100DAED22 /* Critical_TechWorksTests.swift */; };
@@ -29,7 +28,6 @@
 		468601722316C81000DAED22 /* Critical TechWorks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Critical TechWorks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		468601752316C81000DAED22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		468601772316C81000DAED22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4686017A2316C81000DAED22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4686017C2316C81100DAED22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4686017F2316C81100DAED22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		468601812316C81100DAED22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,11 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				468601752316C81000DAED22 /* AppDelegate.swift */,
-				468601772316C81000DAED22 /* ViewController.swift */,
-				468601792316C81000DAED22 /* Main.storyboard */,
-				4686017C2316C81100DAED22 /* Assets.xcassets */,
-				4686017E2316C81100DAED22 /* LaunchScreen.storyboard */,
-				468601812316C81100DAED22 /* Info.plist */,
+				468601952316CAD700DAED22 /* Controller */,
+				468601962316CB2100DAED22 /* Resources */,
 			);
 			path = "Critical TechWorks";
 			sourceTree = "<group>";
@@ -94,6 +89,24 @@
 				4686018C2316C81100DAED22 /* Info.plist */,
 			);
 			path = "Critical TechWorksTests";
+			sourceTree = "<group>";
+		};
+		468601952316CAD700DAED22 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				468601772316C81000DAED22 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		468601962316CB2100DAED22 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4686017C2316C81100DAED22 /* Assets.xcassets */,
+				4686017E2316C81100DAED22 /* LaunchScreen.storyboard */,
+				468601812316C81100DAED22 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +192,6 @@
 			files = (
 				468601802316C81100DAED22 /* LaunchScreen.storyboard in Resources */,
 				4686017D2316C81100DAED22 /* Assets.xcassets in Resources */,
-				4686017B2316C81000DAED22 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +233,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		468601792316C81000DAED22 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4686017A2316C81000DAED22 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4686017E2316C81100DAED22 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -361,7 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Critical TechWorks/Info.plist";
+				INFOPLIST_FILE = "Critical TechWorks/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,7 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Critical TechWorks/Info.plist";
+				INFOPLIST_FILE = "Critical TechWorks/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
