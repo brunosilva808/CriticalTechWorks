@@ -10,14 +10,14 @@ import Foundation
 enum SuggestService: ServiceProtocol {
     
     case suggest(query: String)
-    case comments(postIt: Int)
+    case details(locationId: String)
     
     var path: String {
         switch self {
         case .suggest:
             return "suggest.json"
-        case .comments:
-            return "comments"
+        case .details:
+            return "geocode.json"
         }
     }
     
@@ -30,8 +30,8 @@ enum SuggestService: ServiceProtocol {
         case let .suggest(query):
             let parameters = ["query": query]
             return .requestParameters(parameters)
-        case let .comments(postId):
-            let parameters = ["postId": postId]
+        case let .details(locationId):
+            let parameters = ["locationid": locationId]
             return .requestParameters(parameters)
         }
     }

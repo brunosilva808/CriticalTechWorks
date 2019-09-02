@@ -7,12 +7,14 @@
 
 import UIKit
 
-class TableViewController: UITableViewController, UISearchResultsUpdating {
+class LocationsViewController: UITableViewController, UISearchResultsUpdating {
 
     private var geocoder: Geocoder?
+    private var searchTask: DispatchWorkItem?
     private let searchController = UISearchController(searchResultsController: nil)
     private let cellId = "cellId"
     private let sessionProvider = URLSessionProvider()
+    private let locationDetailsViewController = LocationDetailsViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,7 @@ class TableViewController: UITableViewController, UISearchResultsUpdating {
         self.tableView.tableHeaderView = self.searchController.searchBar
     }
 
-    fileprivate func getPosts(query: String) {
+    fileprivate func getLocationsSuggestions(query: String) {
         sessionProvider.request(type: Geocoder.self, service: SuggestService.suggest(query: query)) { [weak self] response in
             switch response {
             case let .success(geocoder):
@@ -48,23 +50,25 @@ class TableViewController: UITableViewController, UISearchResultsUpdating {
     }
     
     // SearchResultsController
+
     func updateSearchResults(for searchController: UISearchController) {
-        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(self.reload(_:)), object: searchController.searchBar)
-        perform(#selector(self.reload(_:)), with: searchController.searchBar, afterDelay: 0.75)
-    }
-    
-    @objc func reload(_ searchBar: UISearchBar) {
-        guard let query = searchBar.text, query.trimmingCharacters(in: .whitespaces) != "" else {
-            self.tableView.reloadData()
-            return
-        }
+        // Cancel previous task if any
+        self.searchTask?.cancel()
         
-        getPosts(query: query)
+        // Replace previous task with a new one
+        guard let query = searchController.searchBar.text, query.trimmingCharacters(in: .whitespaces) != "" else { return }
+        let task = DispatchWorkItem { [weak self] in
+            self?.getLocationsSuggestions(query: query)
+        }
+        self.searchTask = task
+        
+        // Execute task in 0.75 seconds (if not cancelled !)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.75, execute: task)
     }
     
 }
 
-extension TableViewController {
+extension LocationsViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.searchController.searchBar.text?.count == 0 ? 0 : self.geocoder?.suggestions.count ?? 0
     }
@@ -73,5 +77,10 @@ extension TableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         cell.textLabel?.text = geocoder?.suggestions[indexPath.row].label
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.locationDetailsViewController.suggest = geocoder?.suggestions[indexPath.row]
+        self.present(self.locationDetailsViewController, animated: true, completion: nil)
     }
 }
