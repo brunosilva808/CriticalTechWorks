@@ -11,10 +11,21 @@ class LocationsViewController: UITableViewController, UISearchResultsUpdating {
 
     private var geocoder: Geocoder?
     private var searchTask: DispatchWorkItem?
+    var locationProvider: UserLocationProvider
+    var userLocation: UserLocation?
     private let searchController = UISearchController(searchResultsController: nil)
     private let cellId = "cellId"
     private let sessionProvider = URLSessionProvider()
     private let locationDetailsViewController = LocationDetailsViewController()
+    
+    init(locationProvider: UserLocationProvider) {
+        self.locationProvider = locationProvider
+        super.init(style: .plain)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,5 +93,17 @@ extension LocationsViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.locationDetailsViewController.suggest = geocoder?.suggestions[indexPath.row]
         self.navigationController?.pushViewController(self.locationDetailsViewController, animated: true)
+    }
+}
+
+extension LocationsViewController {
+    func requestUserLocation() {
+        locationProvider.findUserLocation { [weak self] location, error in
+            if error == nil {
+                self?.userLocation = location
+            } else {
+                print("User can not be located 😔")
+            }
+        }
     }
 }

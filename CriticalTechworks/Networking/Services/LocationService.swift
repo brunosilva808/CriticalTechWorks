@@ -31,7 +31,7 @@ enum LocationService: ServiceProtocol {
             let parameters = ["query": query]
             return .requestParameters(parameters)
         case let .details(locationId):
-            let parameters = ["locationid": locationId, "jsonattributes": 1, "gen": 9] as [String : Any]
+            let parameters = ["locationid": locationId]//, "jsonattributes": 1, "gen": 9] as [String : Any]
             return .requestParameters(parameters)
         }
     }

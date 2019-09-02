@@ -29,6 +29,10 @@ final class URLSessionProvider: ProviderProtocol {
         guard error == nil else { return completion(.failure(.unknown)) }
         guard let response = response else { return completion(.failure(.noJSONData)) }
         
+        if let text = String(bytes: data!, encoding: .utf8) {
+            print(text)
+        }
+        
         switch response.statusCode {
         case 200...299:
             guard let data = data, let model = try? JSONDecoder().decode(T.self, from: data) else { return completion(.failure(.unknown)) }
