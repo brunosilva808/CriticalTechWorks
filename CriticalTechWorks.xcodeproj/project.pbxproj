@@ -18,7 +18,7 @@
 		46A8726A2319979A008EB200 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A8725F2319979A008EB200 /* ServiceProtocol.swift */; };
 		46A8726B2319979A008EB200 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A872602319979A008EB200 /* URLSessionProtocol.swift */; };
 		46A8726C2319979A008EB200 /* ProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A872612319979A008EB200 /* ProviderProtocol.swift */; };
-		46A8726D2319979A008EB200 /* SuggestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A872632319979A008EB200 /* SuggestService.swift */; };
+		46A8726D2319979A008EB200 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A872632319979A008EB200 /* LocationService.swift */; };
 		46A8727123199802008EB200 /* URLComponentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A8726F23199802008EB200 /* URLComponentsExtension.swift */; };
 		46A8727223199802008EB200 /* URLRequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A8727023199802008EB200 /* URLRequestExtension.swift */; };
 		46A87278231D296B008EB200 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A87277231D296B008EB200 /* Suggestion.swift */; };
@@ -52,7 +52,7 @@
 		46A8725F2319979A008EB200 /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		46A872602319979A008EB200 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		46A872612319979A008EB200 /* ProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderProtocol.swift; sourceTree = "<group>"; };
-		46A872632319979A008EB200 /* SuggestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestService.swift; sourceTree = "<group>"; };
+		46A872632319979A008EB200 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		46A8726F23199802008EB200 /* URLComponentsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLComponentsExtension.swift; sourceTree = "<group>"; };
 		46A8727023199802008EB200 /* URLRequestExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestExtension.swift; sourceTree = "<group>"; };
 		46A87277231D296B008EB200 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		46A872622319979A008EB200 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				46A872632319979A008EB200 /* SuggestService.swift */,
+				46A872632319979A008EB200 /* LocationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -326,7 +326,7 @@
 				46A872642319979A008EB200 /* ParametersEncoding.swift in Sources */,
 				46A872692319979A008EB200 /* URLSessionProvider.swift in Sources */,
 				46A872672319979A008EB200 /* Task.swift in Sources */,
-				46A8726D2319979A008EB200 /* SuggestService.swift in Sources */,
+				46A8726D2319979A008EB200 /* LocationService.swift in Sources */,
 				46A87278231D296B008EB200 /* Suggestion.swift in Sources */,
 				468602732319727C00DAED22 /* LocationsViewController.swift in Sources */,
 				46A8726A2319979A008EB200 /* ServiceProtocol.swift in Sources */,

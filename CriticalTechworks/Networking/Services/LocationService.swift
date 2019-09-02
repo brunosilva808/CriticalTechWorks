@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum SuggestService: ServiceProtocol {
+enum LocationService: ServiceProtocol {
     
     case suggest(query: String)
     case details(locationId: String)
@@ -31,7 +31,7 @@ enum SuggestService: ServiceProtocol {
             let parameters = ["query": query]
             return .requestParameters(parameters)
         case let .details(locationId):
-            let parameters = ["locationid": locationId]
+            let parameters = ["locationid": locationId, "jsonattributes": 1, "gen": 9] as [String : Any]
             return .requestParameters(parameters)
         }
     }

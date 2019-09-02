@@ -36,7 +36,7 @@ class LocationsViewController: UITableViewController, UISearchResultsUpdating {
     }
 
     fileprivate func getLocationsSuggestions(query: String) {
-        sessionProvider.request(type: Geocoder.self, service: SuggestService.suggest(query: query)) { [weak self] response in
+        sessionProvider.request(type: Geocoder.self, service: LocationService.suggest(query: query)) { [weak self] response in
             switch response {
             case let .success(geocoder):
                 self?.geocoder = geocoder
@@ -81,6 +81,6 @@ extension LocationsViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.locationDetailsViewController.suggest = geocoder?.suggestions[indexPath.row]
-        self.present(self.locationDetailsViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(self.locationDetailsViewController, animated: true)
     }
 }
