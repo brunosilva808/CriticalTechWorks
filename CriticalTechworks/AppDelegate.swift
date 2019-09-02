@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow()
         window?.makeKeyAndVisible()
-//        window?.rootViewController = UINavigationController(rootViewController: LocationsViewController(locationProvider: <#T##UserLocationProvider#>))
+        window?.rootViewController = UINavigationController(rootViewController: LocationsViewController(locationProvider: User()))
         
         return true
     }

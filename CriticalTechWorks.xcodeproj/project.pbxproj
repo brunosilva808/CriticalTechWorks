@@ -28,6 +28,8 @@
 		46A872A5231D6F25008EB200 /* UserLocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A872A4231D6F25008EB200 /* UserLocationProvider.swift */; };
 		46A872A7231D70A1008EB200 /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A872A6231D70A1008EB200 /* LocationProvider.swift */; };
 		46A872A9231D7178008EB200 /* UserLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A872A8231D7178008EB200 /* UserLocationService.swift */; };
+		46A872AC231D7FA8008EB200 /* UserLocationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A872AB231D7FA8008EB200 /* UserLocationMock.swift */; };
+		46A872B1231D8B81008EB200 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A872B0231D8B81008EB200 /* User.swift */; };
 		7E4141EC219EE66000ADFA76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4141EB219EE66000ADFA76 /* AppDelegate.swift */; };
 		7E4141F3219EE66500ADFA76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E4141F2219EE66500ADFA76 /* Assets.xcassets */; };
 		7E4141F6219EE66500ADFA76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E4141F4219EE66500ADFA76 /* LaunchScreen.storyboard */; };
@@ -66,6 +68,8 @@
 		46A872A4231D6F25008EB200 /* UserLocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationProvider.swift; sourceTree = "<group>"; };
 		46A872A6231D70A1008EB200 /* LocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProvider.swift; sourceTree = "<group>"; };
 		46A872A8231D7178008EB200 /* UserLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationService.swift; sourceTree = "<group>"; };
+		46A872AB231D7FA8008EB200 /* UserLocationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationMock.swift; sourceTree = "<group>"; };
+		46A872B0231D8B81008EB200 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7E4141E8219EE66000ADFA76 /* CriticalTechWorks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CriticalTechWorks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E4141EB219EE66000ADFA76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E4141F2219EE66500ADFA76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 				3CA5BEA221A0436D00704410 /* Geocoder.swift */,
 				46A87277231D296B008EB200 /* Suggestion.swift */,
 				46A87279231D2981008EB200 /* Address.swift */,
+				46A872B0231D8B81008EB200 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +195,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		46A872AD231D7FDC008EB200 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				46A872AB231D7FA8008EB200 /* UserLocationMock.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
 		7E4141DF219EE66000ADFA76 = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +240,7 @@
 			children = (
 				7E414200219EE66600ADFA76 /* CriticalTechworksTests.swift */,
 				7E414202219EE66600ADFA76 /* Info.plist */,
+				46A872AD231D7FDC008EB200 /* Location */,
 			);
 			path = CriticalTechworksTests;
 			sourceTree = "<group>";
@@ -355,6 +369,7 @@
 				46A8726C2319979A008EB200 /* ProviderProtocol.swift in Sources */,
 				46A8727123199802008EB200 /* URLComponentsExtension.swift in Sources */,
 				46A872652319979A008EB200 /* NetworkResponse.swift in Sources */,
+				46A872AC231D7FA8008EB200 /* UserLocationMock.swift in Sources */,
 				46A872A7231D70A1008EB200 /* LocationProvider.swift in Sources */,
 				46A872A1231D6A23008EB200 /* UserLocation.swift in Sources */,
 				46A8729F231D57B4008EB200 /* LocationDetailsViewController.swift in Sources */,
@@ -368,6 +383,7 @@
 				46A872672319979A008EB200 /* Task.swift in Sources */,
 				46A8726D2319979A008EB200 /* LocationService.swift in Sources */,
 				46A87278231D296B008EB200 /* Suggestion.swift in Sources */,
+				46A872B1231D8B81008EB200 /* User.swift in Sources */,
 				468602732319727C00DAED22 /* LocationsViewController.swift in Sources */,
 				46A8726A2319979A008EB200 /* ServiceProtocol.swift in Sources */,
 			);
