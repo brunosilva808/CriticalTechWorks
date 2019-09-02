@@ -17,3 +17,9 @@ protocol ServiceProtocol {
     var headers: Headers? { get }
     var parametersEncoding: ParametersEncoding { get }
 }
+
+extension ServiceProtocol {
+    var baseURL: URL {
+        return URL(string: "http://autocomplete.geocoder.api.here.com/6.2/")!
+    }
+}

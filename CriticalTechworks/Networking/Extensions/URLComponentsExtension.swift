@@ -18,5 +18,9 @@ extension URLComponents {
         queryItems = parameters.map { key, value in
             return URLQueryItem(name: key, value: String(describing: value))
         }
+        
+        let urlQueryItems = [URLQueryItem(name: "app_id", value: "Ptxu9U8a7K3tpSMEichi"),
+                             URLQueryItem(name: "app_code", value: "Em5r0EUO0emafprWaJ5OEg")]
+        queryItems?.append(contentsOf: urlQueryItems)
     }
 }

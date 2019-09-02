@@ -7,19 +7,15 @@
 
 import Foundation
 
-enum PostService: ServiceProtocol {
+enum SuggestService: ServiceProtocol {
     
-    case all
+    case suggest(query: String)
     case comments(postIt: Int)
-    
-    var baseURL: URL {
-        return URL(string: "https://jsonplaceholder.typicode.com/")!
-    }
     
     var path: String {
         switch self {
-        case .all:
-            return "posts"
+        case .suggest:
+            return "suggest.json"
         case .comments:
             return "comments"
         }
@@ -31,8 +27,9 @@ enum PostService: ServiceProtocol {
     
     var task: Task {
         switch self {
-        case .all:
-            return .requestPlain
+        case let .suggest(query):
+            let parameters = ["query": query]
+            return .requestParameters(parameters)
         case let .comments(postId):
             let parameters = ["postId": postId]
             return .requestParameters(parameters)

@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Welcome: Codable {
-    let code: Int?
-    let status: String?
-    let message: String?
+// MARK: - Welcome
+struct Geocoder: Codable {
+    let suggestions: [Suggestion]
 }
+
