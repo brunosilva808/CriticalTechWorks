@@ -32,6 +32,7 @@
 		46C0867623212D1200C2F67D /* UserLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C0867223212D1200C2F67D /* UserLocationService.swift */; };
 		46C0867B23212D2B00C2F67D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46C0867823212D2B00C2F67D /* Assets.xcassets */; };
 		46C0867C23212D2B00C2F67D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46C0867923212D2B00C2F67D /* LaunchScreen.storyboard */; };
+		46C0868123212D9F00C2F67D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C0868023212D9E00C2F67D /* LocationManager.swift */; };
 		7E4141EC219EE66000ADFA76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4141EB219EE66000ADFA76 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		46C0867223212D1200C2F67D /* UserLocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocationService.swift; sourceTree = "<group>"; };
 		46C0867823212D2B00C2F67D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46C0867A23212D2B00C2F67D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		46C0868023212D9E00C2F67D /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = "CriticalTechWorks/Location Module/LocationManager.swift"; sourceTree = SOURCE_ROOT; };
 		7E4141E8219EE66000ADFA76 /* CriticalTechWorks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CriticalTechWorks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E4141EB219EE66000ADFA76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E4141F7219EE66500ADFA76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -206,6 +208,14 @@
 			path = CriticalTechWorks/Resources;
 			sourceTree = SOURCE_ROOT;
 		};
+		46C0867F23212D8900C2F67D /* Location Module */ = {
+			isa = PBXGroup;
+			children = (
+				46C0868023212D9E00C2F67D /* LocationManager.swift */,
+			);
+			path = "Location Module";
+			sourceTree = "<group>";
+		};
 		7E4141DF219EE66000ADFA76 = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +240,7 @@
 				46C0866123212CF200C2F67D /* Model */,
 				7E414211219EE83B00ADFA76 /* Controller */,
 				46C0864323212CCD00C2F67D /* Networking */,
+				46C0867F23212D8900C2F67D /* Location Module */,
 				46C0866C23212D1200C2F67D /* Location */,
 				46C0867723212D2B00C2F67D /* Resources */,
 				7E4141F7219EE66500ADFA76 /* Info.plist */,
@@ -298,6 +309,7 @@
 					};
 					7E4141FB219EE66600ADFA76 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 						TestTargetID = 7E4141E7219EE66000ADFA76;
 					};
 				};
@@ -347,6 +359,7 @@
 			files = (
 				46C0867523212D1200C2F67D /* UserLocationProvider.swift in Sources */,
 				46C0867623212D1200C2F67D /* UserLocationService.swift in Sources */,
+				46C0868123212D9F00C2F67D /* LocationManager.swift in Sources */,
 				46C0865B23212CCD00C2F67D /* URLComponentsExtension.swift in Sources */,
 				46C0866723212CF200C2F67D /* Geocoder.swift in Sources */,
 				46C0865523212CCD00C2F67D /* ParametersEncoding.swift in Sources */,
@@ -560,6 +573,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E4WPGTUQAN;
 				INFOPLIST_FILE = MarvelTests/Info.plist;
@@ -570,6 +584,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.brunosilva.MarvelTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CriticalTechWorksTests/CriticalTechWorksTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CriticalTechWorks.app/CriticalTechWorks";
@@ -581,6 +597,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E4WPGTUQAN;
 				INFOPLIST_FILE = MarvelTests/Info.plist;
@@ -591,6 +608,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.brunosilva.MarvelTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CriticalTechWorksTests/CriticalTechWorksTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CriticalTechWorks.app/CriticalTechWorks";
