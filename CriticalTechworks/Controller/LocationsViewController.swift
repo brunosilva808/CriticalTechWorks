@@ -11,8 +11,8 @@ class LocationsViewController: UITableViewController, UISearchResultsUpdating {
 
     private var geocoder: Geocoder?
     private var searchTask: DispatchWorkItem?
-    private var locationProvider: UserLocationProvider
-    private var userLocation: UserLocation?
+    var locationProvider: UserLocationProvider
+    var userLocation: UserLocation?
     private let searchController = UISearchController(searchResultsController: nil)
     private let cellId = "cellId"
     private let sessionProvider = URLSessionProvider()
@@ -32,8 +32,6 @@ class LocationsViewController: UITableViewController, UISearchResultsUpdating {
         
         setupTableView()
         setupSearchController()
-        
-        self.requestUserLocation()
     }
     
     fileprivate func setupTableView() {
@@ -101,7 +99,7 @@ extension LocationsViewController {
 extension LocationsViewController {
     func requestUserLocation() {
         locationProvider.findUserLocation { [weak self] location, error in
-            if error != nil {
+            if error == nil {
                 self?.userLocation = location
             } else {
                 print("User can not be located 😔")
