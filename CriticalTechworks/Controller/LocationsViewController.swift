@@ -21,6 +21,11 @@ class LocationsViewController: UITableViewController, UISearchResultsUpdating {
     init(locationProvider: UserLocationProvider) {
         self.locationProvider = locationProvider
         super.init(style: .plain)
+        
+        let location = LocationManager()
+        location.getCurrentLocation { (location) in
+            print(location)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -33,10 +33,20 @@
 		46C0867B23212D2B00C2F67D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46C0867823212D2B00C2F67D /* Assets.xcassets */; };
 		46C0867C23212D2B00C2F67D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46C0867923212D2B00C2F67D /* LaunchScreen.storyboard */; };
 		46C0868123212D9F00C2F67D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C0868023212D9E00C2F67D /* LocationManager.swift */; };
+		46C087A02322BE5B00C2F67D /* CriticalTechWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C0879D2322BE5B00C2F67D /* CriticalTechWorkTests.swift */; };
+		46C087A12322BE5B00C2F67D /* LocationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C0879E2322BE5B00C2F67D /* LocationManagerTests.swift */; };
+		46C087A22322BE5B00C2F67D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46C0879F2322BE5B00C2F67D /* Info.plist */; };
 		7E4141EC219EE66000ADFA76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4141EB219EE66000ADFA76 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		46C0879023215AA800C2F67D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E4141E0219EE66000ADFA76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E4141E7219EE66000ADFA76;
+			remoteInfo = CriticalTechWorks;
+		};
 		7E4141FD219EE66600ADFA76 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7E4141E0219EE66000ADFA76 /* Project object */;
@@ -73,6 +83,10 @@
 		46C0867823212D2B00C2F67D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46C0867A23212D2B00C2F67D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46C0868023212D9E00C2F67D /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = "CriticalTechWorks/Location Module/LocationManager.swift"; sourceTree = SOURCE_ROOT; };
+		46C0878B23215AA800C2F67D /* CriticalTechWorkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CriticalTechWorkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		46C0879D2322BE5B00C2F67D /* CriticalTechWorkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CriticalTechWorkTests.swift; sourceTree = "<group>"; };
+		46C0879E2322BE5B00C2F67D /* LocationManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManagerTests.swift; sourceTree = "<group>"; };
+		46C0879F2322BE5B00C2F67D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E4141E8219EE66000ADFA76 /* CriticalTechWorks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CriticalTechWorks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E4141EB219EE66000ADFA76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E4141F7219EE66500ADFA76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +94,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		46C0878823215AA800C2F67D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7E4141E5219EE66000ADFA76 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,6 +237,16 @@
 			path = "Location Module";
 			sourceTree = "<group>";
 		};
+		46C0879C2322BE5B00C2F67D /* CriticalTechWorkTests */ = {
+			isa = PBXGroup;
+			children = (
+				46C0879D2322BE5B00C2F67D /* CriticalTechWorkTests.swift */,
+				46C0879E2322BE5B00C2F67D /* LocationManagerTests.swift */,
+				46C0879F2322BE5B00C2F67D /* Info.plist */,
+			);
+			path = CriticalTechWorkTests;
+			sourceTree = SOURCE_ROOT;
+		};
 		7E4141DF219EE66000ADFA76 = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +260,7 @@
 			children = (
 				7E4141E8219EE66000ADFA76 /* CriticalTechWorks.app */,
 				7E4141FC219EE66600ADFA76 /* CriticalTechWorksTests.xctest */,
+				46C0878B23215AA800C2F67D /* CriticalTechWorkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -244,6 +276,7 @@
 				46C0866C23212D1200C2F67D /* Location */,
 				46C0867723212D2B00C2F67D /* Resources */,
 				7E4141F7219EE66500ADFA76 /* Info.plist */,
+				46C0879C2322BE5B00C2F67D /* CriticalTechWorkTests */,
 			);
 			path = CriticalTechworks;
 			sourceTree = "<group>";
@@ -260,6 +293,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		46C0878A23215AA800C2F67D /* CriticalTechWorkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46C0879223215AA800C2F67D /* Build configuration list for PBXNativeTarget "CriticalTechWorkTests" */;
+			buildPhases = (
+				46C0878723215AA800C2F67D /* Sources */,
+				46C0878823215AA800C2F67D /* Frameworks */,
+				46C0878923215AA800C2F67D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46C0879123215AA800C2F67D /* PBXTargetDependency */,
+			);
+			name = CriticalTechWorkTests;
+			productName = CriticalTechWorkTests;
+			productReference = 46C0878B23215AA800C2F67D /* CriticalTechWorkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7E4141E7219EE66000ADFA76 /* CriticalTechWorks */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E414205219EE66600ADFA76 /* Build configuration list for PBXNativeTarget "CriticalTechWorks" */;
@@ -301,9 +352,13 @@
 		7E4141E0219EE66000ADFA76 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1010;
 				TargetAttributes = {
+					46C0878A23215AA800C2F67D = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 7E4141E7219EE66000ADFA76;
+					};
 					7E4141E7219EE66000ADFA76 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -329,11 +384,20 @@
 			targets = (
 				7E4141E7219EE66000ADFA76 /* CriticalTechWorks */,
 				7E4141FB219EE66600ADFA76 /* CriticalTechWorksTests */,
+				46C0878A23215AA800C2F67D /* CriticalTechWorkTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		46C0878923215AA800C2F67D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46C087A22322BE5B00C2F67D /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7E4141E6219EE66000ADFA76 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,6 +417,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		46C0878723215AA800C2F67D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46C087A12322BE5B00C2F67D /* LocationManagerTests.swift in Sources */,
+				46C087A02322BE5B00C2F67D /* CriticalTechWorkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7E4141E4219EE66000ADFA76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -395,6 +468,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		46C0879123215AA800C2F67D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E4141E7219EE66000ADFA76 /* CriticalTechWorks */;
+			targetProxy = 46C0879023215AA800C2F67D /* PBXContainerItemProxy */;
+		};
 		7E4141FE219EE66600ADFA76 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7E4141E7219EE66000ADFA76 /* CriticalTechWorks */;
@@ -414,6 +492,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		46C0879323215AA800C2F67D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CEWUHN7W92;
+				INFOPLIST_FILE = CriticalTechWorkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brunosilva.CriticalTechWorkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CriticalTechWorks.app/CriticalTechWorks";
+			};
+			name = Debug;
+		};
+		46C0879423215AA800C2F67D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CEWUHN7W92;
+				INFOPLIST_FILE = CriticalTechWorkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brunosilva.CriticalTechWorkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CriticalTechWorks.app/CriticalTechWorks";
+			};
+			name = Release;
+		};
 		7E414203219EE66600ADFA76 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -618,6 +738,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		46C0879223215AA800C2F67D /* Build configuration list for PBXNativeTarget "CriticalTechWorkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46C0879323215AA800C2F67D /* Debug */,
+				46C0879423215AA800C2F67D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7E4141E3219EE66000ADFA76 /* Build configuration list for PBXProject "CriticalTechWorks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -23,7 +23,7 @@ class LocationManager: NSObject {
 //        self.locationManager.requestLocation()
 //        self.locationManager.requestWhenInUseAuthorization()
 //    }
-        
+    
     func getCurrentLocation(completion: @escaping (CLLocation) -> Void) {
         currentLocationCallback = { (location) in
             completion(location)
